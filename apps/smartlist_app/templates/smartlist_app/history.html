@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Smart_list</title>
+    {% load static %}
+  <!-- The line above tells Django to be ready to listen for static files -->
+  <link rel="stylesheet" href="{% static 'smartlist_app/css/style2.css' %}" media="screen" title="no title"  charset="utf-8">
+  </head>
+  <body>
+
+    <h1>Your SmartList History!</h1>
+    {% for todo in todos%}
+      <h1>{{todo.name}}</h1>
+      {% for resource in todo.created_resources.all|slice:":3" %}
+      <h4> <a href="{{resource.link}}">{{resource.title}}</a></h4>
+      <p>{{resource.snippet}}</p>
+      <!-- <hr> -->
+      {%endfor%}
+      {%endfor%}
+      <form class="" action="clean/history" method="post">
+          {% csrf_token %}
+        <input type="submit" name="" value="Clean History">
+      </form>
+      <form class="" action="/dashboard" method="post">
+          {% csrf_token %}
+        <input type="submit" name="" value="<< Back">
+      </form>
+  </body>
+</html>
