@@ -51,9 +51,12 @@
          <!--#################################### LOGIN FACEBOOK -->
 
          <!-- login -->
+
          <div id="fb-root"></div>
+         <h4> login with facebook</h4>
            <script src="//connect.facebook.net/en_US/all.js"></script>
          <script>
+
          window.fbAsyncInit = function() {
          FB.init({
            appId      : '419571025105632',
@@ -85,13 +88,7 @@
      }(document, 'script', 'facebook-jssdk'));
          </script>
 
-        <!-- <h1>{{user.first_name}} {{user.last_name}}</h1> -->
-         <!-- login -->
-         <!-- <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with"
-         / data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
-<!-- <br><br><br><br><br><br><br><br> -->
-
-         <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+         <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false" onlogin="checkLoginState();"></div>
         <br><br><br><br>
         <h4>Not a member?</h4>
         <form class="register_button" action="/registration" method="POST">
