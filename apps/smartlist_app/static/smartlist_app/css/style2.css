@@ -13,12 +13,16 @@ body {
   text-align: right;
   padding-right: 15px;
   padding-top: 10px;
+  background-color: #faf7f5;
+
 }
+
+
 #header h1{
   display: inline-block;
   font-family: Trebuchet, sans-serif;
   padding-right: 70px;
-  color: white;
+  color: #faf7f5;
 }
 #logo h2{
   color: black;
@@ -49,9 +53,10 @@ a{
 }
 h1 {
   text-align: center;
-  color: black;
+  color: white;
   font-family: Trebuchet, sans-serif;
-  font-size: 20px;
+
+
 }
 #list h2{
   margin-left: auto;
@@ -78,13 +83,18 @@ h4 a{
   margin-top: -15px;
 }
 .query{
-  width: 300px;
+
   margin-left: auto;
   margin-right: auto;
 }
 #search {
-  margin-left: 50px;
-  width: 400px
+
+  /*margin-left: 30px;*/
+  width: 330px;
+  height: 60px;
+  padding-top: 20px;
+
+  /*background: #faf7f5*/
 }
 #history{
   display: inline-block;
@@ -93,7 +103,8 @@ h4 a{
   display: inline-block;
   width: 200px
 }
-input #search_button{
+
+#search_button{
   color: red
 }
 #query{
@@ -114,7 +125,8 @@ p {
 #delete{
   color: red;
 }
-#list {
+#list, .his {
+  margin-top: 20px;
   width: 900px;
   /*margin-left: auto;
   margin-right: auto;*/
@@ -125,6 +137,16 @@ p {
   margin-left: 100px;
   background-color: white;
   border-radius: 10px;
+}
+#his {
+  color:black;
+}
+#p {
+  color: black;
+}
+#special {
+  margin-left: 20px;
+  text-decoration: none;
 }
 
 button{

@@ -9,16 +9,17 @@
   <link rel="stylesheet" href="{% static 'smartlist_app/css/style2.css' %}" media="screen" title="no title"  charset="utf-8">
   </head>
   <body>
+    <div class="his">
 
-    <h1>Your SmartList History!</h1>
-    {% for todo in todos%}
-      <h1>{{todo.name}}</h1>
-      {% for resource in todo.created_resources.all|slice:":3" %}
-      <h4> <a href="{{resource.link}}">{{resource.title}}</a></h4>
-      <p>{{resource.snippet}}</p>
-      <!-- <hr> -->
-      {%endfor%}
-      {%endfor%}
+          <h1 id="his">Your SmartList History!</h1>
+          {% for todo in todos%}
+            <h3 id="his">{{todo.name}}</h3>
+            {% for resource in todo.created_resources.all|slice:":3" %}
+            <p id= "p"> <a href="{{resource.link}}">{{resource.title}}</a></p>
+            <!-- <hr> -->
+            {%endfor%}
+            {%endfor%}
+    </div>
       <form class="" action="clean/history" method="post">
           {% csrf_token %}
         <input type="submit" name="" value="Clean History">
